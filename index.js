@@ -11,7 +11,6 @@ function setup() {
   createCanvas(window.windowWidth, window.windowHeight)
   cols = floor(width / scl)
   rows = floor(height / scl)
-  fr = createP("")
 
   flowfield = new Array(cols * rows)
 
@@ -49,6 +48,4 @@ function draw() {
     particles[i].show()
     particles[i].follow(flowfield)
   }
-
-  fr.html(floor(frameRate()))
 }
